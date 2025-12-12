@@ -1,0 +1,441 @@
+M3U8 Duration Analysis Report
+Generated: Fri Dec 12 20:37:44 PKT 2025
+M3U8 URL: https://media-assets-test.irvinei.com/BJQMgFq81ZXu0mFg9q5tECPN7EwFTvfL5fsBM8FrDFxeEidbvnP51v0JRyib/RP1A.200720.012/index-1765393200.m3u8
+
+================================================================================
+Segment Analysis
+================================================================================
+
+Segment #1: 2025-12-11_05-04-26-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 10.773333s
+  Difference: 2.773333s
+  File Size: 3417.5 KB
+  Status: ⚠️ MISMATCH
+
+Segment #2: 2025-12-11_05-04-35-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.009178s
+  Difference: -1.990822s
+  File Size: 2023.7 KB
+  Status: ⚠️ MISMATCH
+
+Segment #3: 2025-12-11_05-04-41-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.003333s
+  Difference: .003333s
+  File Size: 2716.2 KB
+  Status: ✓ OK
+
+Segment #4: 2025-12-11_05-04-49-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.005944s
+  Difference: .005944s
+  File Size: 2736.6 KB
+  Status: ✓ OK
+
+Segment #5: 2025-12-11_05-04-57-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.005767s
+  Difference: .005767s
+  File Size: 2693.1 KB
+  Status: ✓ OK
+
+Segment #6: 2025-12-11_05-05-05-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #7: 2025-12-11_05-05-22-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 10.775467s
+  Difference: 2.775467s
+  File Size: 3418.5 KB
+  Status: ⚠️ MISMATCH
+
+Segment #8: 2025-12-11_05-05-31-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.012178s
+  Difference: -1.987822s
+  File Size: 2053.8 KB
+  Status: ⚠️ MISMATCH
+
+Segment #9: 2025-12-11_05-05-37-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.004367s
+  Difference: .004367s
+  File Size: 2689.0 KB
+  Status: ✓ OK
+
+Segment #10: 2025-12-11_05-05-45-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.004489s
+  Difference: .004489s
+  File Size: 2718.8 KB
+  Status: ✓ OK
+
+Segment #11: 2025-12-11_05-05-53-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.005744s
+  Difference: .005744s
+  File Size: 2708.1 KB
+  Status: ✓ OK
+
+Segment #12: 2025-12-11_05-06-01-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #13: 2025-12-11_05-06-06-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.806689s
+  Difference: .806689s
+  File Size: 2733.3 KB
+  Status: ⚠️ MISMATCH
+
+Segment #14: 2025-12-11_05-06-13-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 9.938300s
+  Difference: 1.938300s
+  File Size: 3346.9 KB
+  Status: ⚠️ MISMATCH
+
+Segment #15: 2025-12-11_05-06-23-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.010322s
+  Difference: .010322s
+  File Size: 2682.3 KB
+  Status: ✓ OK
+
+Segment #16: 2025-12-11_05-06-31-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.009690s
+  Difference: .009690s
+  File Size: 2696.0 KB
+  Status: ✓ OK
+
+Segment #17: 2025-12-11_05-06-39-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.037367s
+  Difference: -1.962633s
+  File Size: 2048.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #18: 2025-12-11_05-06-50-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.654489s
+  Difference: .654489s
+  File Size: 2707.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #19: 2025-12-11_05-06-57-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.004333s
+  Difference: .004333s
+  File Size: 2686.5 KB
+  Status: ✓ OK
+
+Segment #20: 2025-12-11_05-07-05-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 9.965822s
+  Difference: 1.965822s
+  File Size: 3365.8 KB
+  Status: ⚠️ MISMATCH
+
+Segment #21: 2025-12-11_05-07-15-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.011567s
+  Difference: .011567s
+  File Size: 2665.0 KB
+  Status: ✓ OK
+
+Segment #22: 2025-12-11_05-07-23-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 4.506533s
+  Difference: -3.493467s
+  File Size: 1536.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #23: 2025-12-11_05-07-32-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.787823s
+  Difference: .787823s
+  File Size: 2726.9 KB
+  Status: ⚠️ MISMATCH
+
+Segment #24: 2025-12-11_05-07-39-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.010422s
+  Difference: .010422s
+  File Size: 2679.7 KB
+  Status: ✓ OK
+
+Segment #25: 2025-12-11_05-07-47-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 9.971322s
+  Difference: 1.971322s
+  File Size: 3353.5 KB
+  Status: ⚠️ MISMATCH
+
+Segment #26: 2025-12-11_05-07-57-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.049711s
+  Difference: .049711s
+  File Size: 2694.4 KB
+  Status: ✓ OK
+
+Segment #27: 2025-12-11_05-08-05-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.005333s
+  Difference: -1.994667s
+  File Size: 2048.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #28: 2025-12-11_05-08-16-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.777400s
+  Difference: .777400s
+  File Size: 2695.8 KB
+  Status: ⚠️ MISMATCH
+
+Segment #29: 2025-12-11_05-08-23-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.005367s
+  Difference: .005367s
+  File Size: 2679.1 KB
+  Status: ✓ OK
+
+Segment #30: 2025-12-11_05-08-31-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.997756s
+  Difference: -.002244s
+  File Size: 2659.9 KB
+  Status: ✓ OK
+
+Segment #31: 2025-12-11_05-08-39-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.009578s
+  Difference: .009578s
+  File Size: 2679.9 KB
+  Status: ✓ OK
+
+Segment #32: 2025-12-11_05-08-47-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.005367s
+  Difference: .005367s
+  File Size: 2686.7 KB
+  Status: ✓ OK
+
+Segment #33: 2025-12-11_05-08-55-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #34: 2025-12-11_05-09-00-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 10.793200s
+  Difference: 2.793200s
+  File Size: 3367.4 KB
+  Status: ⚠️ MISMATCH
+
+Segment #35: 2025-12-11_05-09-09-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.010233s
+  Difference: .010233s
+  File Size: 2686.7 KB
+  Status: ✓ OK
+
+Segment #36: 2025-12-11_05-09-17-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.015700s
+  Difference: .015700s
+  File Size: 2662.8 KB
+  Status: ✓ OK
+
+Segment #37: 2025-12-11_05-09-25-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.010844s
+  Difference: -1.989156s
+  File Size: 1998.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #38: 2025-12-11_05-09-31-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.013433s
+  Difference: .013433s
+  File Size: 2667.0 KB
+  Status: ✓ OK
+
+Segment #39: 2025-12-11_05-09-39-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #40: 2025-12-11_05-09-44-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.676567s
+  Difference: .676567s
+  File Size: 2677.1 KB
+  Status: ⚠️ MISMATCH
+
+Segment #41: 2025-12-11_05-09-51-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.002022s
+  Difference: .002022s
+  File Size: 2656.0 KB
+  Status: ✓ OK
+
+Segment #42: 2025-12-11_05-09-59-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.006711s
+  Difference: .006711s
+  File Size: 2685.0 KB
+  Status: ✓ OK
+
+Segment #43: 2025-12-11_05-10-07-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.005333s
+  Difference: .005333s
+  File Size: 2723.4 KB
+  Status: ✓ OK
+
+Segment #44: 2025-12-11_05-10-15-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.998778s
+  Difference: -.001222s
+  File Size: 2712.7 KB
+  Status: ✓ OK
+
+Segment #45: 2025-12-11_05-10-23-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #46: 2025-12-11_05-10-28-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.767744s
+  Difference: .767744s
+  File Size: 2698.6 KB
+  Status: ⚠️ MISMATCH
+
+Segment #47: 2025-12-11_05-10-35-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.001733s
+  Difference: .001733s
+  File Size: 2686.5 KB
+  Status: ✓ OK
+
+Segment #48: 2025-12-11_05-10-43-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 10.008056s
+  Difference: 2.008056s
+  File Size: 3359.9 KB
+  Status: ⚠️ MISMATCH
+
+Segment #49: 2025-12-11_05-10-53-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.002644s
+  Difference: -1.997356s
+  File Size: 1998.4 KB
+  Status: ⚠️ MISMATCH
+
+Segment #50: 2025-12-11_05-10-59-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.671333s
+  Difference: -.328667s
+  File Size: 2560.0 KB
+  Status: ✓ OK
+
+Segment #51: 2025-12-11_05-11-12-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.786011s
+  Difference: .786011s
+  File Size: 2693.5 KB
+  Status: ⚠️ MISMATCH
+
+Segment #52: 2025-12-11_05-11-19-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.007778s
+  Difference: .007778s
+  File Size: 2676.4 KB
+  Status: ✓ OK
+
+Segment #53: 2025-12-11_05-11-27-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.002333s
+  Difference: .002333s
+  File Size: 2691.8 KB
+  Status: ✓ OK
+
+Segment #54: 2025-12-11_05-11-35-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.999700s
+  Difference: -.000300s
+  File Size: 2664.4 KB
+  Status: ✓ OK
+
+Segment #55: 2025-12-11_05-11-43-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.998656s
+  Difference: -.001344s
+  File Size: 2655.6 KB
+  Status: ✓ OK
+
+Segment #56: 2025-12-11_05-11-51-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #57: 2025-12-11_05-11-56-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.777755s
+  Difference: .777755s
+  File Size: 2717.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #58: 2025-12-11_05-12-03-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.973978s
+  Difference: -.026022s
+  File Size: 2668.5 KB
+  Status: ✓ OK
+
+Segment #59: 2025-12-11_05-12-11-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.002278s
+  Difference: .002278s
+  File Size: 2676.6 KB
+  Status: ✓ OK
+
+Segment #60: 2025-12-11_05-12-19-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.015333s
+  Difference: .015333s
+  File Size: 2696.4 KB
+  Status: ✓ OK
+
+Segment #61: 2025-12-11_05-12-27-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.009367s
+  Difference: .009367s
+  File Size: 2711.1 KB
+  Status: ✓ OK
+
+Segment #62: 2025-12-11_05-12-35-000000.ts
+  Declared Duration: 8s
+  Actual Duration: FAILED (Cannot access)
+  Status: ❌ FAILED
+
+Segment #63: 2025-12-11_05-12-40-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 10.773333s
+  Difference: 2.773333s
+  File Size: 3377.0 KB
+  Status: ⚠️ MISMATCH
+
+Segment #64: 2025-12-11_05-12-49-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.007078s
+  Difference: .007078s
+  File Size: 2674.7 KB
+  Status: ✓ OK

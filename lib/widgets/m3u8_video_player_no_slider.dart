@@ -72,6 +72,18 @@ class _M3u8VideoPlayerNoSliderState extends State<M3u8VideoPlayerNoSlider> {
                   child: _buildAlertWidget(widget.controller.currentAlert!),
                 ),
 
+              // Timestamp overlay (bottom-left)
+              Positioned(
+                bottom: 16,
+                left: 16,
+                child: AnimatedBuilder(
+                  animation: widget.controller,
+                  builder: (context, child) {
+                    return _buildTimestampOverlay();
+                  },
+                ),
+              ),
+
               // Play/Pause overlay icon
               if (widget.showPlayPauseButton && !widget.controller.isPlaying)
                 Center(
@@ -139,6 +151,34 @@ class _M3u8VideoPlayerNoSliderState extends State<M3u8VideoPlayerNoSlider> {
               constraints: const BoxConstraints(),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTimestampOverlay() {
+    final position = widget.controller.position;
+    final hours = position.inHours;
+    final minutes = position.inMinutes.remainder(60);
+    final seconds = position.inSeconds.remainder(60);
+    
+    final timeString = '${hours.toString().padLeft(2, '0')}:'
+        '${minutes.toString().padLeft(2, '0')}:'
+        '${seconds.toString().padLeft(2, '0')}';
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: Colors.black.withOpacity(0.6),
+        borderRadius: BorderRadius.circular(4),
+      ),
+      child: Text(
+        timeString,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          fontFeatures: [FontFeature.tabularFigures()],
         ),
       ),
     );

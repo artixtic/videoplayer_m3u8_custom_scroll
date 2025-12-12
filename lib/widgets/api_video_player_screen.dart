@@ -48,8 +48,18 @@ class _ApiVideoPlayerScreenState extends State<ApiVideoPlayerScreen> {
       // Parse API response
       final videoResponse = VideoApiResponse.fromJson(widget.apiData);
 
-      // Convert alerts to markers
-      _markers = AlertConverter.fromVideoApiResponse(videoResponse);
+      // Convert alerts to markers with automatic offset detection
+      // Use full timeline parsing to account for gaps in recording
+      // This is more accurate for videos with discontinuities
+      // If alerts are still off, try adjusting manualOffsetSeconds:
+      // - If alerts appear too early: use positive value (e.g., 480.0 for 8 min)
+      // - If alerts appear too late: use negative value (e.g., -480.0 for 8 min)
+      _markers = await AlertConverter.fromVideoApiResponseAsync(
+        videoResponse,
+        detectTimelineOffset: true,
+        useSimpleOffsetCalculation: false, // Use full timeline parsing to handle gaps
+        manualOffsetSeconds: 0.0, // Adjust this if alerts are still misaligned
+      );
 
       // Initialize controller
       _controller = M3u8VideoController();
@@ -154,6 +164,24 @@ class _ApiVideoPlayerScreenState extends State<ApiVideoPlayerScreen> {
           ),
         ),
 
+        // Alert Timeline Badges
+        if (_markers.isNotEmpty)
+          Container(
+            color: widget.backgroundColor ?? Colors.black,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 8.0,
+            ),
+            child: AlertTimeline(
+              alerts: _markers,
+              onAlertTap: (alert) {
+                _controller.seekTo(
+                  Duration(seconds: alert.timeInSeconds.toInt()),
+                );
+              },
+            ),
+          ),
+
         // Controls and Slider Section
         Container(
           color: widget.backgroundColor ?? Colors.black,
@@ -226,9 +254,10 @@ class _ApiVideoPlayerScreenState extends State<ApiVideoPlayerScreen> {
               widget.useWaveSlider
                   ? WaveformSlider(
                       controller: _controller,
-                      activeColor: widget.sliderActiveColor ?? Colors.orange,
-                      inactiveColor: widget.sliderInactiveColor ?? Colors.grey,
-                      alertColor: widget.sliderMarkerColor ?? Colors.amber,
+                      activeColor: widget.sliderActiveColor ?? Colors.black87,
+                      inactiveColor: widget.sliderInactiveColor ?? Colors.black26,
+                      alertColor: widget.sliderMarkerColor ?? const Color(0xFF8BC34A),
+                      backgroundColor: const Color(0xFFE3F2FD), // Light blue background
                       height: 100,
                       showTodayButton: false,
                       showLiveIndicator: false,

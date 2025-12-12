@@ -88,7 +88,10 @@ class _DebugWaveformState extends State<DebugWaveform> {
       };
 
       final videoResponse = VideoApiResponse.fromJson(apiData);
-      final markers = AlertConverter.fromVideoApiResponse(videoResponse);
+      final markers = await AlertConverter.fromVideoApiResponseAsync(
+        videoResponse,
+        detectTimelineOffset: true,
+      );
 
       print('\n' + '=' * 50);
       print('DEBUG: Alert Markers Created');

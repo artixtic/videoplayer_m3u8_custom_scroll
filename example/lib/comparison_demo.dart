@@ -94,7 +94,10 @@ class _SliderComparisonDemoState extends State<SliderComparisonDemo> {
       };
 
       final videoResponse = VideoApiResponse.fromJson(apiData);
-      final markers = AlertConverter.fromVideoApiResponse(videoResponse);
+      final markers = await AlertConverter.fromVideoApiResponseAsync(
+        videoResponse,
+        detectTimelineOffset: true,
+      );
 
       _videoController = M3u8VideoController();
       await _videoController.initialize(

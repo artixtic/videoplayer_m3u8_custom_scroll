@@ -14,4 +14,21 @@ class MethodChannelVideoPlayerM3u8Alerts extends VideoPlayerM3u8AlertsPlatform {
     final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
+
+  @override
+  Future<double?> getSegmentDuration(String segmentUrl) async {
+    try {
+      final duration = await methodChannel.invokeMethod<double>(
+        'getSegmentDuration',
+        {'segmentUrl': segmentUrl},
+      );
+      return duration;
+    } on PlatformException catch (e) {
+      debugPrint('⚠️  Platform error getting segment duration: ${e.message}');
+      return null;
+    } catch (e) {
+      debugPrint('⚠️  Error getting segment duration: $e');
+      return null;
+    }
+  }
 }

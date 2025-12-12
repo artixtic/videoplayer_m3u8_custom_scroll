@@ -1,7 +1,7 @@
 /// Model for video API response data
 class VideoApiResponse {
   final String fileUrl;
-  final int duration; // in seconds
+  final double duration; // in seconds
   final List<AiAlert> aiAlert;
   final DateTime fileStartTime; // UTC
   final DateTime fileEndTime; // UTC
@@ -16,9 +16,17 @@ class VideoApiResponse {
 
   /// Create VideoApiResponse from JSON
   factory VideoApiResponse.fromJson(Map<String, dynamic> json) {
+    // Handle duration as either int or double
+    final durationValue = json['duration'];
+    final double duration = durationValue is int
+        ? durationValue.toDouble()
+        : durationValue is double
+            ? durationValue
+            : (durationValue as num).toDouble();
+
     return VideoApiResponse(
       fileUrl: json['fileUrl'] as String,
-      duration: json['duration'] as int,
+      duration: duration,
       aiAlert: (json['aiAlert'] as List<dynamic>)
           .map((e) => AiAlert.fromJson(e as Map<String, dynamic>))
           .toList(),

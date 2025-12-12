@@ -97,10 +97,10 @@ class _WaveformSliderDemoState extends State<WaveformSliderDemo> {
 
       final videoResponse = VideoApiResponse.fromJson(apiData);
 
-      // Disable M3U8 offset - alerts at 8,327s-8,359s (within 22,424s video)
-      final markers = AlertConverter.fromVideoApiResponse(
+      // Use automatic timeline offset detection by parsing M3U8
+      final markers = await AlertConverter.fromVideoApiResponseAsync(
         videoResponse,
-        autoDetectM3u8Offset: false,
+        detectTimelineOffset: true,
       );
 
       debugPrint('📍 Initialized ${markers.length} alert markers:');
@@ -199,7 +199,7 @@ class _WaveformSliderDemoState extends State<WaveformSliderDemo> {
                         vertical: 4,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.7),
+                        color: Colors.black.withValues(alpha: 0.7),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(

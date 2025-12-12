@@ -80,9 +80,13 @@ class _ApiVideoPlayerExampleState extends State<ApiVideoPlayerExample> {
       // Parse the API response
       final videoResponse = VideoApiResponse.fromJson(apiData);
 
-      // Convert AI alerts to AlertMarkers
-      final markers = AlertConverter.fromVideoApiResponse(
+      // Convert AI alerts to AlertMarkers with dynamic offset detection
+      // Try simple offset calculation first (more accurate for consistent videos)
+      // If that doesn't work, set useSimpleOffsetCalculation to false for full timeline parsing
+      final markers = await AlertConverter.fromVideoApiResponseAsync(
         videoResponse,
+        detectTimelineOffset: true,
+        useSimpleOffsetCalculation: true, // Use simpler offset-based calculation
         defaultDisplayDuration: 3000,
       );
 

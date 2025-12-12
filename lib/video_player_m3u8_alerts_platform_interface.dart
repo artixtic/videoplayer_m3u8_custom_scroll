@@ -26,4 +26,8 @@ abstract class VideoPlayerM3u8AlertsPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<double?> getSegmentDuration(String segmentUrl) {
+    throw UnimplementedError('getSegmentDuration() has not been implemented.');
+  }
 }

@@ -9,6 +9,7 @@ class WaveformSlider extends StatefulWidget {
   final Color activeColor;
   final Color inactiveColor;
   final Color alertColor;
+  final Color? backgroundColor;
   final double height;
   final bool showTodayButton;
   final bool showLiveIndicator;
@@ -22,6 +23,7 @@ class WaveformSlider extends StatefulWidget {
     this.activeColor = const Color(0xFF00BCD4),
     this.inactiveColor = const Color(0xFFE0E0E0),
     this.alertColor = const Color(0xFF8BC34A),
+    this.backgroundColor,
     this.height = 100,
     this.showTodayButton = true,
     this.showLiveIndicator = true,
@@ -62,7 +64,7 @@ class _WaveformSliderState extends State<WaveformSlider> {
 
         return Container(
           height: widget.height,
-          color: Colors.white,
+          color: widget.backgroundColor ?? const Color(0xFFE3F2FD), // Light blue background matching design
           child: Stack(
             children: [
               // Waveform bars
@@ -114,79 +116,6 @@ class _WaveformSliderState extends State<WaveformSlider> {
                 ),
               ),
 
-              // Today button (center)
-              if (widget.showTodayButton)
-                Center(
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: widget.onTodayPressed ?? _jumpToToday,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 8,
-                        ),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE3F2FD),
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                            color: const Color(0xFF00BCD4),
-                            width: 1,
-                          ),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.calendar_today,
-                              size: 16,
-                              color: Colors.blue[700],
-                            ),
-                            const SizedBox(width: 6),
-                            Text(
-                              'Today',
-                              style: TextStyle(
-                                color: Colors.blue[700],
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-              // LIVE indicator (right side)
-              if (widget.showLiveIndicator)
-                Positioned(
-                  right: 16,
-                  top: 0,
-                  bottom: 0,
-                  child: Center(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 8,
-                      ),
-                      decoration: BoxDecoration(
-                        color: widget.activeColor,
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: const Text(
-                        'LIVE',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
             ],
           ),
         );
@@ -195,8 +124,6 @@ class _WaveformSliderState extends State<WaveformSlider> {
   }
 
   void _handleSeek(Offset position, BuildContext context) {
-    final RenderBox box = context.findRenderObject() as RenderBox;
-    final width = box.size.width;
     final maxValue = widget.controller.duration.inMilliseconds.toDouble();
 
     final value = _calculateValueFromPosition(position.dx, context, maxValue);
@@ -280,43 +207,39 @@ class WaveformPainter extends CustomPainter {
       }
     }
 
-    // Draw bars
+    // Draw tick marks (thin vertical lines) matching the design
     for (int i = 0; i < barsCount; i++) {
       final x = i * barWidth;
       final normalizedPosition = i / barsCount;
 
-      // Determine if this bar is in an alert zone
+      // Determine if this tick is in an alert zone
       final isAlertBar = alertZones.containsKey(i);
 
-      // Simple uniform height for all bars - no random variation
-      final baseHeight = size.height * 0.6; // 60% of total height
-
-      // Increase height for alert zones (15% more)
-      final finalHeight = isAlertBar ? baseHeight * 1.15 : baseHeight;
+      // Tick mark height - taller for alert zones
+      final baseHeight = size.height * 0.4; // 40% of total height
+      final tickHeight = isAlertBar ? baseHeight * 1.3 : baseHeight;
 
       // Determine color based on progress and alert
-      Color barColor;
+      Color tickColor;
       if (isAlertBar) {
-        barColor = alertColor; // Always use alert color for alert bars
+        tickColor = alertColor; // Green for alert zones
       } else if (normalizedPosition <= progress) {
-        barColor = activeColor;
+        tickColor = Colors.black87; // Black for played segments
       } else {
-        barColor = inactiveColor;
+        tickColor = Colors.black26; // Light gray for unplayed segments
       }
 
       final paint = Paint()
-        ..color = barColor
-        ..style = PaintingStyle.fill;
+        ..color = tickColor
+        ..strokeWidth = 1.5
+        ..style = PaintingStyle.stroke;
 
-      // Draw vertical bar
-      final rect = Rect.fromCenter(
-        center: Offset(x + barWidth / 2, centerY),
-        width: barWidth * 0.6, // 60% width for spacing
-        height: finalHeight,
-      );
-
-      canvas.drawRRect(
-        RRect.fromRectAndRadius(rect, const Radius.circular(1)),
+      // Draw vertical tick mark
+      final startY = centerY - tickHeight / 2;
+      final endY = centerY + tickHeight / 2;
+      canvas.drawLine(
+        Offset(x + barWidth / 2, startY),
+        Offset(x + barWidth / 2, endY),
         paint,
       );
     }
