@@ -1,0 +1,3 @@
+Index,TS_File_Name,Declared_Duration(s),Actual_Duration(s),Difference(s),File_Size(KB),Status
+1,"2025-12-11_05-04-26-000000.ts",8,10.773333,2.773333,3417.6,"[WARNING] MISMATCH"
+2,"2025-12-11_05-04-35-000000.ts",8,6.009178,-1.990822,2023.8,"[WARNING] MISMATCH"

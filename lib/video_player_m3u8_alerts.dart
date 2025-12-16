@@ -9,6 +9,7 @@ export 'models/alert_marker.dart';
 export 'models/video_api_response.dart';
 // Export utilities
 export 'utils/alert_converter.dart';
+export 'utils/m3u8_verifier.dart';
 // Export platform interface (for advanced usage)
 export 'widgets/alert_widgets.dart';
 export 'widgets/api_video_player_screen.dart';
@@ -22,5 +23,9 @@ export 'widgets/waveform_slider.dart';
 class VideoPlayerM3u8Alerts {
   Future<String?> getPlatformVersion() {
     return VideoPlayerM3u8AlertsPlatform.instance.getPlatformVersion();
+  }
+
+  Future<double?> getSegmentDuration(String segmentUrl) {
+    return VideoPlayerM3u8AlertsPlatform.instance.getSegmentDuration(segmentUrl);
   }
 }

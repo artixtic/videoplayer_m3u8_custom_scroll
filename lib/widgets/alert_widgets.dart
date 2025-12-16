@@ -22,40 +22,34 @@ class AlertBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bgColor = backgroundColor ?? alert.color ?? const Color(0xFF8BC34A);
+    // Light green background matching the design
+    final bgColor = backgroundColor ?? const Color(0xFFA5D6A7);
     final txtColor = textColor ?? Colors.white;
 
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(8),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           decoration: BoxDecoration(
             color: bgColor,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                blurRadius: 4,
-                offset: const Offset(0, 2),
-              ),
-            ],
+            borderRadius: BorderRadius.circular(8),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               if (showIcon && alert.icon != null)
                 Padding(
-                  padding: const EdgeInsets.only(right: 6),
-                  child: Icon(alert.icon, size: 16, color: txtColor),
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Icon(alert.icon, size: 18, color: txtColor),
                 ),
               Text(
                 _formatAlertTitle(alert.message),
                 style: TextStyle(
                   color: txtColor,
-                  fontSize: 12,
+                  fontSize: 13,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 0.5,
                 ),

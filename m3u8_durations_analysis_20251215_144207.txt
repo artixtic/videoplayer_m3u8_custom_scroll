@@ -1,0 +1,21 @@
+M3U8 Duration Analysis Report
+Generated: 12/15/2025 14:42:09
+M3U8 URL: https://media-assets-test.irvinei.com/BJQMgFq81ZXu0mFg9q5tECPN7EwFTvfL5fsBM8FrDFxeEidbvnP51v0JRyib/RP1A.200720.012/index-1765393200.m3u8 
+
+================================================================================
+Segment Analysis
+================================================================================
+
+Segment #1: 2025-12-11_05-04-26-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 10.773333s
+  Difference: 2.773333s
+  File Size: 3417.6 KB
+  Status: [WARNING] MISMATCH
+
+Segment #2: 2025-12-11_05-04-35-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 6.009178s
+  Difference: -1.990822s
+  File Size: 2023.8 KB
+  Status: [WARNING] MISMATCH

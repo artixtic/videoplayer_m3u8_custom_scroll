@@ -1,0 +1,119 @@
+M3U8 Duration Analysis Report
+Generated: 12/15/2025 15:31:09
+M3U8 URL: https://media-assets-dev.irvinei.com/GZzGp4YGcUz9mSJVpryFP7g4OsA74X98wym4q1u3g8nvGAi6yFMC7MrUAeux/45B43E95-931E-430A-BEF7-E6DF9D974BD9/index-1765738800.m3u8
+
+================================================================================
+Segment Analysis
+================================================================================
+
+Segment #1: 2025-12-15_10-27-29-000000.ts
+  Declared Duration: 9.73s
+  Actual Duration: 9.733123s
+  Difference: 0.00312300000000043s
+  File Size: 2603.9 KB
+  Status: [OK]
+
+Segment #2: 2025-12-15_10-27-36-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.906233s
+  Difference: -0.00376699999999985s
+  File Size: 2276.6 KB
+  Status: [OK]
+
+Segment #3: 2025-12-15_10-27-44-000000.ts
+  Declared Duration: 8.07s
+  Actual Duration: 8.068433s
+  Difference: -0.00156699999999965s
+  File Size: 2287.6 KB
+  Status: [OK]
+
+Segment #4: 2025-12-15_10-27-52-000000.ts
+  Declared Duration: 7.99s
+  Actual Duration: 7.993533s
+  Difference: 0.00353300000000001s
+  File Size: 2614.9 KB
+  Status: [OK]
+
+Segment #5: 2025-12-15_10-28-15-000000.ts
+  Declared Duration: 9.8s
+  Actual Duration: 9.800667s
+  Difference: 0.000666999999999973s
+  File Size: 2371.1 KB
+  Status: [OK]
+
+Segment #6: 2025-12-15_10-28-22-000000.ts
+  Declared Duration: 6.23s
+  Actual Duration: 6.226356s
+  Difference: -0.00364400000000042s
+  File Size: 1426.2 KB
+  Status: [OK]
+
+Segment #7: 2025-12-15_10-28-28-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.998333s
+  Difference: -0.00166700000000031s
+  File Size: 2311.6 KB
+  Status: [OK]
+
+Segment #8: 2025-12-15_10-28-36-000000.ts
+  Declared Duration: 9.81s
+  Actual Duration: 9.811411s
+  Difference: 0.00141099999999916s
+  File Size: 3264.1 KB
+  Status: [OK]
+
+Segment #9: 2025-12-15_10-29-01-000000.ts
+  Declared Duration: 9.66s
+  Actual Duration: 9.663266s
+  Difference: 0.00326599999999999s
+  File Size: 2337.5 KB
+  Status: [OK]
+
+Segment #10: 2025-12-15_10-29-08-000000.ts
+  Declared Duration: 8.05s
+  Actual Duration: 8.052112s
+  Difference: 0.00211199999999856s
+  File Size: 2607 KB
+  Status: [OK]
+
+Segment #11: 2025-12-15_10-29-16-000000.ts
+  Declared Duration: 7.94s
+  Actual Duration: 7.943544s
+  Difference: 0.00354399999999977s
+  File Size: 2607.9 KB
+  Status: [OK]
+
+Segment #12: 2025-12-15_10-29-24-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.003800s
+  Difference: 0.00380000000000003s
+  File Size: 2645 KB
+  Status: [OK]
+
+Segment #13: 2025-12-15_10-29-47-000000.ts
+  Declared Duration: 9.61s
+  Actual Duration: 9.612367s
+  Difference: 0.00236700000000134s
+  File Size: 2121.8 KB
+  Status: [OK]
+
+Segment #14: 2025-12-15_10-29-54-000000.ts
+  Declared Duration: 8.08s
+  Actual Duration: 8.076711s
+  Difference: -0.00328900000000054s
+  File Size: 2490.3 KB
+  Status: [OK]
+
+================================================================================
+Summary
+================================================================================
+Total segments analyzed: 14
+Successfully analyzed: 14
+Failed: 0
+
+Total declared duration: 118.88s (2 minutes)
+Total actual duration: 118.889889s (2 minutes)
+Total difference: 0.00988900000001536s (0 minutes)
+
+CSV file: m3u8_durations_analysis_20251215_153108.csv
+================================================================================
