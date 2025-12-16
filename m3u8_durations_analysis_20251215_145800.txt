@@ -1,0 +1,21 @@
+M3U8 Duration Analysis Report
+Generated: 12/15/2025 14:58:02
+M3U8 URL: https://media-assets-dev.irvinei.com/GZzGp4YGcUz9mSJVpryFP7g4OsA74X98wym4q1u3g8nvGAi6yFMC7MrUAeux/45B43E95-931E-430A-BEF7-E6DF9D974BD9/index-1765738800.m3u8
+
+================================================================================
+Segment Analysis
+================================================================================
+
+================================================================================
+Summary
+================================================================================
+Total segments analyzed: 0
+Successfully analyzed: 0
+Failed: 0
+
+Total declared duration: 0s (0 minutes)
+Total actual duration: 0s (0 minutes)
+Total difference: 0s (0 minutes)
+
+CSV file: m3u8_durations_analysis_20251215_145800.csv
+================================================================================

@@ -3,13 +3,12 @@ import 'package:http/http.dart' as http;
 
 import '../models/alert_marker.dart';
 import '../models/video_api_response.dart';
-import 'm3u8_verifier.dart';
 
 /// Segment information with position and duration
 class SegmentInfo {
   final double position;
   final double duration;
-  
+
   SegmentInfo({required this.position, required this.duration});
 }
 
@@ -114,24 +113,6 @@ class AlertConverter {
         debugPrint(log);
       }
 
-      // Log last 5 segments
-      if (segmentCount > 10) {
-        debugPrint('   ...');
-        final sortedEntries = timeline.entries.toList()
-          ..sort((a, b) => a.value.position.compareTo(b.value.position));
-        final lastSegments = sortedEntries.skip(
-          sortedEntries.length > 5 ? sortedEntries.length - 5 : 0,
-        );
-
-        int segNum = segmentCount - lastSegments.length + 1;
-        for (final entry in lastSegments) {
-          debugPrint(
-            '   Segment $segNum: ${entry.key.toUtc()} -> ${entry.value.position.toStringAsFixed(1)}s',
-          );
-          segNum++;
-        }
-      }
-
       debugPrint('');
       debugPrint(
         '   ✅ Built timeline: $segmentCount segments, ${cumulativePosition.toStringAsFixed(1)}s total',
@@ -185,28 +166,34 @@ class AlertConverter {
       final segmentIndex = sortedKeys.indexOf(segmentBefore);
       DateTime? nextSegmentTimestamp;
       SegmentInfo? nextSegmentInfo;
-      
+
       if (segmentIndex >= 0 && segmentIndex < sortedKeys.length - 1) {
         nextSegmentTimestamp = sortedKeys[segmentIndex + 1];
         nextSegmentInfo = timeline[nextSegmentTimestamp];
       }
-      
+
       // Calculate time difference between alert and segment
-      final timeDiff = alertTime.difference(segmentBefore).inMilliseconds / 1000.0;
-      
+      final timeDiff =
+          alertTime.difference(segmentBefore).inMilliseconds / 1000.0;
+
       // If there's a next segment, check if alert is closer to it
       double offsetWithinSegment = 0.0;
       if (nextSegmentTimestamp != null && nextSegmentInfo != null) {
-        final timeToNext = nextSegmentTimestamp.difference(alertTime).inMilliseconds / 1000.0;
-        
+        final timeToNext =
+            nextSegmentTimestamp.difference(alertTime).inMilliseconds / 1000.0;
+
         // If alert is closer to next segment or between segments
         if (timeToNext >= 0 && timeToNext < timeDiff) {
           // Alert is closer to next segment, use that segment's position
           // But we need to calculate backwards from next segment
-          final timeFromNext = nextSegmentTimestamp.difference(alertTime).inMilliseconds / 1000.0;
-          offsetWithinSegment = nextSegmentInfo.duration - timeFromNext.clamp(0.0, nextSegmentInfo.duration);
+          final timeFromNext =
+              nextSegmentTimestamp.difference(alertTime).inMilliseconds /
+              1000.0;
+          offsetWithinSegment =
+              nextSegmentInfo.duration -
+              timeFromNext.clamp(0.0, nextSegmentInfo.duration);
           final finalPosition = nextSegmentInfo.position - offsetWithinSegment;
-          
+
           if (debug) {
             debugPrint(
               '      [Mapping] Alert: $alertTime, Using NEXT segment: $nextSegmentTimestamp, SegmentPos: ${nextSegmentInfo.position.toStringAsFixed(1)}s, TimeFromNext: ${timeFromNext.toStringAsFixed(1)}s, Offset: ${offsetWithinSegment.toStringAsFixed(1)}s, FinalPos: ${finalPosition.toStringAsFixed(1)}s',
@@ -215,12 +202,12 @@ class AlertConverter {
           return finalPosition;
         }
       }
-      
+
       // Alert is within or before the current segment
       // Use the time difference, but clamp to segment duration
       offsetWithinSegment = timeDiff.clamp(0.0, segmentInfo.duration);
       final finalPosition = segmentInfo.position + offsetWithinSegment;
-      
+
       if (debug) {
         debugPrint(
           '      [Mapping] Alert: $alertTime, Segment: $segmentBefore, SegmentPos: ${segmentInfo.position.toStringAsFixed(1)}s, TimeDiff: ${timeDiff.toStringAsFixed(1)}s, SegmentDur: ${segmentInfo.duration.toStringAsFixed(1)}s, Offset: ${offsetWithinSegment.toStringAsFixed(1)}s, FinalPos: ${finalPosition.toStringAsFixed(1)}s',
@@ -482,7 +469,7 @@ class AlertConverter {
 
   /// Convert VideoApiResponse with timeline-based position calculation
   /// Parses entire M3U8 to account for gaps and discontinuities
-  /// 
+  ///
   /// [useSimpleOffsetCalculation]: If true, uses a simpler offset-based approach
   ///   that may be more accurate for videos with consistent timing. If false,
   ///   uses full timeline parsing which accounts for gaps.
@@ -518,41 +505,53 @@ class AlertConverter {
         m3u8Url: response.fileUrl,
         apiFileStartTime: response.fileStartTime,
       );
-      
+
       debugPrint('');
-      debugPrint('📝 Converting ${response.aiAlert.length} alerts with offset correction...');
-      debugPrint('   Detected offset: ${offset.toStringAsFixed(1)}s (${(offset / 60).toStringAsFixed(1)} min)');
+      debugPrint(
+        '📝 Converting ${response.aiAlert.length} alerts with offset correction...',
+      );
+      debugPrint(
+        '   Detected offset: ${offset.toStringAsFixed(1)}s (${(offset / 60).toStringAsFixed(1)} min)',
+      );
       if (manualOffsetSeconds != 0.0) {
-        debugPrint('   Manual offset: ${manualOffsetSeconds.toStringAsFixed(1)}s');
+        debugPrint(
+          '   Manual offset: ${manualOffsetSeconds.toStringAsFixed(1)}s',
+        );
       }
       debugPrint('');
-      
+
       final List<AlertMarker> markers = [];
       for (int i = 0; i < response.aiAlert.length; i++) {
         final alert = response.aiAlert[i];
         // Calculate position relative to fileStartTime
-        final double timeFromStart = alert.createdAt
-            .difference(response.fileStartTime)
-            .inMilliseconds / 1000.0;
-        
+        final double timeFromStart =
+            alert.createdAt.difference(response.fileStartTime).inMilliseconds /
+            1000.0;
+
         // Apply offset correction: if offset is positive (fileStartTime is after first segment),
         // we need to subtract it to align with video player timeline
         double correctedPosition = timeFromStart - offset;
-        
+
         // Apply manual offset if provided
         if (manualOffsetSeconds != 0.0) {
           correctedPosition = correctedPosition + manualOffsetSeconds;
         }
-        
+
         debugPrint('   Alert #${i + 1}: ${alert.createdAt.toUtc()}');
-        debugPrint('      Time from start: ${timeFromStart.toStringAsFixed(1)}s');
+        debugPrint(
+          '      Time from start: ${timeFromStart.toStringAsFixed(1)}s',
+        );
         debugPrint('      Offset correction: -${offset.toStringAsFixed(1)}s');
         if (manualOffsetSeconds != 0.0) {
-          debugPrint('      Manual offset: ${manualOffsetSeconds.toStringAsFixed(1)}s');
+          debugPrint(
+            '      Manual offset: ${manualOffsetSeconds.toStringAsFixed(1)}s',
+          );
         }
-        debugPrint('      Final position: ${correctedPosition.toStringAsFixed(1)}s');
+        debugPrint(
+          '      Final position: ${correctedPosition.toStringAsFixed(1)}s',
+        );
         debugPrint('');
-        
+
         if (correctedPosition >= 0) {
           markers.add(
             AlertMarker(
@@ -565,7 +564,7 @@ class AlertConverter {
           );
         }
       }
-      
+
       markers.sort((a, b) => a.timeInSeconds.compareTo(b.timeInSeconds));
       return markers;
     }
@@ -591,7 +590,7 @@ class AlertConverter {
     // Find the first segment timestamp and calculate offset
     final sortedTimelineEntries = timeline.entries.toList()
       ..sort((a, b) => a.key.compareTo(b.key));
-    
+
     if (sortedTimelineEntries.isEmpty) {
       debugPrint('⚠️  No segments found in timeline');
       return convertAlertsToMarkers(
@@ -608,22 +607,30 @@ class AlertConverter {
     final firstSegmentTimestamp = sortedTimelineEntries.first.key;
     final firstSegmentInfo = sortedTimelineEntries.first.value;
     final firstSegmentPosition = firstSegmentInfo.position;
-    
+
     // Calculate offset: difference between first segment timestamp and API fileStartTime
     // This tells us how much earlier/later the video actually starts compared to fileStartTime
-    final double timelineOffset = response.fileStartTime
-        .difference(firstSegmentTimestamp)
-        .inMilliseconds / 1000.0;
+    final double timelineOffset =
+        response.fileStartTime
+            .difference(firstSegmentTimestamp)
+            .inMilliseconds /
+        1000.0;
 
     debugPrint('');
     debugPrint('📊 Timeline Alignment Analysis:');
     debugPrint('   ─────────────────────────────────────');
     debugPrint('   API fileStartTime:     ${response.fileStartTime.toUtc()}');
     debugPrint('   First segment time:    ${firstSegmentTimestamp.toUtc()}');
-    debugPrint('   First segment position: ${firstSegmentPosition.toStringAsFixed(1)}s');
-    debugPrint('   Timeline offset:       ${timelineOffset.toStringAsFixed(1)}s');
+    debugPrint(
+      '   First segment position: ${firstSegmentPosition.toStringAsFixed(1)}s',
+    );
+    debugPrint(
+      '   Timeline offset:       ${timelineOffset.toStringAsFixed(1)}s',
+    );
     if (timelineOffset.abs() > 60) {
-      debugPrint('   ⚠️  Significant offset detected: ${(timelineOffset / 60).toStringAsFixed(1)} minutes');
+      debugPrint(
+        '   ⚠️  Significant offset detected: ${(timelineOffset / 60).toStringAsFixed(1)} minutes',
+      );
     }
     debugPrint('   ─────────────────────────────────────');
     debugPrint('');
@@ -659,49 +666,49 @@ class AlertConverter {
     for (int i = 0; i < response.aiAlert.length; i++) {
       final alert = response.aiAlert[i];
       debugPrint('   Alert  #${i + 1}: ${alert.createdAt.toUtc()}');
-      
+
       // Find position using timeline (this gives us position relative to first segment)
       final position = findVideoPositionForTime(
         alertTime: alert.createdAt,
         timeline: timeline,
         debug: true,
       );
-      
+
       if (position != null) {
         // The position from findVideoPositionForTime is calculated based on segment timestamps
         // It finds the segment containing the alert and calculates position based on cumulative durations
         // However, we need to account for the offset between fileStartTime and first segment timestamp
-        
+
         // Calculate what the position SHOULD be based on simple time difference
-        final double expectedPositionFromFileStart = alert.createdAt
-            .difference(response.fileStartTime)
-            .inMilliseconds / 1000.0;
-        
+        final double expectedPositionFromFileStart =
+            alert.createdAt.difference(response.fileStartTime).inMilliseconds /
+            1000.0;
+
         // The timeline position is based on segment timestamps, not fileStartTime
         // If there's an offset between first segment and fileStartTime, we need to adjust
         // timelineOffset = fileStartTime - firstSegmentTimestamp
         // If positive: fileStartTime is AFTER first segment (video starts earlier)
         // If negative: fileStartTime is BEFORE first segment (video starts later)
-        
+
         double finalPosition = position;
-        
+
         // Apply timeline offset correction
         // The direction depends on how the video player interprets the timeline
         // Try both directions and see which aligns better with actual video playback
         // If alerts appear too early: try subtracting offset (position - timelineOffset)
         // If alerts appear too late: try adding offset (position + timelineOffset)
-        
+
         // Current approach: add offset
         // If this doesn't work, try: finalPosition = position - timelineOffset;
         finalPosition = position - timelineOffset;
-        
+
         debugPrint(
           '      ⚠️  Using REVERSED offset direction (subtracting instead of adding)',
         );
         debugPrint(
           '      If alerts are still wrong, try changing line 668 to: finalPosition = position + timelineOffset;',
         );
-        
+
         debugPrint(
           '      Expected (from fileStart): ${expectedPositionFromFileStart.toStringAsFixed(1)}s',
         );
@@ -714,11 +721,12 @@ class AlertConverter {
         debugPrint(
           '      Adjusted position: ${finalPosition.toStringAsFixed(1)}s',
         );
-        
+
         // Apply proportional correction if drift is significant
         if (drift > 2.0 && timelineDuration > 0 && expectedDuration > 0) {
           // Scale the position proportionally to match expected duration
-          final double scaledPosition = (finalPosition / timelineDuration) * expectedDuration;
+          final double scaledPosition =
+              (finalPosition / timelineDuration) * expectedDuration;
           debugPrint(
             '      Timeline duration: ${timelineDuration.toStringAsFixed(1)}s',
           );
@@ -730,7 +738,7 @@ class AlertConverter {
           );
           finalPosition = scaledPosition;
         }
-        
+
         // Apply manual offset correction if provided
         if (manualOffsetSeconds != 0.0) {
           finalPosition = finalPosition + manualOffsetSeconds;
@@ -741,12 +749,12 @@ class AlertConverter {
             '      Position after manual offset: ${finalPosition.toStringAsFixed(1)}s',
           );
         }
-        
+
         // Ensure position is non-negative
         if (finalPosition < 0) {
           finalPosition = 0;
         }
-        
+
         // Calculate difference from expected position for debugging
         final difference = finalPosition - expectedPositionFromFileStart;
         debugPrint(
@@ -761,7 +769,7 @@ class AlertConverter {
           );
         }
         debugPrint('');
-        
+
         markers.add(
           AlertMarker(
             timeInSeconds: finalPosition,
@@ -775,11 +783,13 @@ class AlertConverter {
         debugPrint('      ⚠️  Could not find position in timeline');
         debugPrint('');
         // Fallback: use simple time calculation
-        final double fallbackPosition = alert.createdAt
-            .difference(response.fileStartTime)
-            .inMilliseconds / 1000.0;
+        final double fallbackPosition =
+            alert.createdAt.difference(response.fileStartTime).inMilliseconds /
+            1000.0;
         if (fallbackPosition >= 0) {
-          debugPrint('      Using fallback position: ${fallbackPosition.toStringAsFixed(1)}s');
+          debugPrint(
+            '      Using fallback position: ${fallbackPosition.toStringAsFixed(1)}s',
+          );
           debugPrint('');
           markers.add(
             AlertMarker(

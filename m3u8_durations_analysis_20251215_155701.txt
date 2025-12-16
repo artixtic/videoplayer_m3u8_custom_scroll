@@ -1,0 +1,749 @@
+M3U8 Duration Analysis Report
+Generated: 12/15/2025 15:57:02
+M3U8 URL: https://media-assets-dev.irvinei.com/GZzGp4YGcUz9mSJVpryFP7g4OsA74X98wym4q1u3g8nvGAi6yFMC7MrUAeux/45B43E95-931E-430A-BEF7-E6DF9D974BD9/index-1765738800.m3u8
+
+================================================================================
+Segment Analysis
+================================================================================
+
+Segment #1: 2025-12-15_10-27-29-000000.ts
+  Declared Duration: 9.73s
+  Actual Duration: 9.733123s
+  Difference: 0.00312300000000043s
+  File Size: 2603.9 KB
+  Status: [OK]
+
+Segment #2: 2025-12-15_10-27-36-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.906233s
+  Difference: -0.00376699999999985s
+  File Size: 2276.6 KB
+  Status: [OK]
+
+Segment #3: 2025-12-15_10-27-44-000000.ts
+  Declared Duration: 8.07s
+  Actual Duration: 8.068433s
+  Difference: -0.00156699999999965s
+  File Size: 2287.6 KB
+  Status: [OK]
+
+Segment #4: 2025-12-15_10-27-52-000000.ts
+  Declared Duration: 7.99s
+  Actual Duration: 7.993533s
+  Difference: 0.00353300000000001s
+  File Size: 2614.9 KB
+  Status: [OK]
+
+Segment #5: 2025-12-15_10-28-15-000000.ts
+  Declared Duration: 9.8s
+  Actual Duration: 9.800667s
+  Difference: 0.000666999999999973s
+  File Size: 2371.1 KB
+  Status: [OK]
+
+Segment #6: 2025-12-15_10-28-22-000000.ts
+  Declared Duration: 6.23s
+  Actual Duration: 6.226356s
+  Difference: -0.00364400000000042s
+  File Size: 1426.2 KB
+  Status: [OK]
+
+Segment #7: 2025-12-15_10-28-28-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 7.998333s
+  Difference: -0.00166700000000031s
+  File Size: 2311.6 KB
+  Status: [OK]
+
+Segment #8: 2025-12-15_10-28-36-000000.ts
+  Declared Duration: 9.81s
+  Actual Duration: 9.811411s
+  Difference: 0.00141099999999916s
+  File Size: 3264.1 KB
+  Status: [OK]
+
+Segment #9: 2025-12-15_10-29-01-000000.ts
+  Declared Duration: 9.66s
+  Actual Duration: 9.663266s
+  Difference: 0.00326599999999999s
+  File Size: 2337.5 KB
+  Status: [OK]
+
+Segment #10: 2025-12-15_10-29-08-000000.ts
+  Declared Duration: 8.05s
+  Actual Duration: 8.052112s
+  Difference: 0.00211199999999856s
+  File Size: 2607 KB
+  Status: [OK]
+
+Segment #11: 2025-12-15_10-29-16-000000.ts
+  Declared Duration: 7.94s
+  Actual Duration: 7.943544s
+  Difference: 0.00354399999999977s
+  File Size: 2607.9 KB
+  Status: [OK]
+
+Segment #12: 2025-12-15_10-29-24-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.003800s
+  Difference: 0.00380000000000003s
+  File Size: 2645 KB
+  Status: [OK]
+
+Segment #13: 2025-12-15_10-29-47-000000.ts
+  Declared Duration: 9.61s
+  Actual Duration: 9.612367s
+  Difference: 0.00236700000000134s
+  File Size: 2121.8 KB
+  Status: [OK]
+
+Segment #14: 2025-12-15_10-29-54-000000.ts
+  Declared Duration: 8.08s
+  Actual Duration: 8.076711s
+  Difference: -0.00328900000000054s
+  File Size: 2490.3 KB
+  Status: [OK]
+
+Segment #15: 2025-12-15_10-30-02-000000.ts
+  Declared Duration: 7.98s
+  Actual Duration: 7.983844s
+  Difference: 0.00384399999999996s
+  File Size: 2573.6 KB
+  Status: [OK]
+
+Segment #16: 2025-12-15_10-30-10-000000.ts
+  Declared Duration: 8.04s
+  Actual Duration: 8.044356s
+  Difference: 0.00435600000000136s
+  File Size: 2437.8 KB
+  Status: [OK]
+
+Segment #17: 2025-12-15_10-30-31-000000.ts
+  Declared Duration: 9.51s
+  Actual Duration: 9.507323s
+  Difference: -0.00267700000000026s
+  File Size: 2670.2 KB
+  Status: [OK]
+
+Segment #18: 2025-12-15_10-30-38-000000.ts
+  Declared Duration: 7.95s
+  Actual Duration: 7.945367s
+  Difference: -0.00463300000000011s
+  File Size: 2542.6 KB
+  Status: [OK]
+
+Segment #19: 2025-12-15_10-30-46-000000.ts
+  Declared Duration: 8.11s
+  Actual Duration: 8.113744s
+  Difference: 0.00374400000000108s
+  File Size: 2577.8 KB
+  Status: [OK]
+
+Segment #20: 2025-12-15_10-30-54-000000.ts
+  Declared Duration: 7.96s
+  Actual Duration: 7.962578s
+  Difference: 0.00257799999999975s
+  File Size: 2648 KB
+  Status: [OK]
+
+Segment #21: 2025-12-15_10-31-17-000000.ts
+  Declared Duration: 9.72s
+  Actual Duration: 9.716189s
+  Difference: -0.00381100000000067s
+  File Size: 2637.3 KB
+  Status: [OK]
+
+Segment #22: 2025-12-15_10-31-24-000000.ts
+  Declared Duration: 8.07s
+  Actual Duration: 8.072533s
+  Difference: 0.00253299999999967s
+  File Size: 2627.2 KB
+  Status: [OK]
+
+Segment #23: 2025-12-15_10-31-32-000000.ts
+  Declared Duration: 7.96s
+  Actual Duration: 7.959000s
+  Difference: -0.00100000000000033s
+  File Size: 2557.5 KB
+  Status: [OK]
+
+Segment #24: 2025-12-15_10-31-40-000000.ts
+  Declared Duration: 8.03s
+  Actual Duration: 8.034700s
+  Difference: 0.00470000000000148s
+  File Size: 2664.1 KB
+  Status: [OK]
+
+Segment #25: 2025-12-15_10-32-03-000000.ts
+  Declared Duration: 9.78s
+  Actual Duration: 9.782934s
+  Difference: 0.00293399999999977s
+  File Size: 2596.6 KB
+  Status: [OK]
+
+Segment #26: 2025-12-15_10-32-10-000000.ts
+  Declared Duration: 7.89s
+  Actual Duration: 7.890311s
+  Difference: 0.00031099999999995s
+  File Size: 2651.3 KB
+  Status: [OK]
+
+Segment #27: 2025-12-15_10-32-18-000000.ts
+  Declared Duration: 7.9s
+  Actual Duration: 7.899333s
+  Difference: -0.000666999999999973s
+  File Size: 2604.3 KB
+  Status: [OK]
+
+Segment #28: 2025-12-15_10-32-26-000000.ts
+  Declared Duration: 10.18s
+  Actual Duration: 10.181222s
+  Difference: 0.00122200000000028s
+  File Size: 3061.1 KB
+  Status: [OK]
+
+Segment #29: 2025-12-15_10-32-49-000000.ts
+  Declared Duration: 9.65s
+  Actual Duration: 9.650200s
+  Difference: 0.000199999999999534s
+  File Size: 2650.5 KB
+  Status: [OK]
+
+Segment #30: 2025-12-15_10-32-56-000000.ts
+  Declared Duration: 7.96s
+  Actual Duration: 7.963189s
+  Difference: 0.00318899999999989s
+  File Size: 2463.8 KB
+  Status: [OK]
+
+Segment #31: 2025-12-15_10-33-04-000000.ts
+  Declared Duration: 8.05s
+  Actual Duration: 8.052733s
+  Difference: 0.00273299999999921s
+  File Size: 2530.7 KB
+  Status: [OK]
+
+Segment #32: 2025-12-15_10-33-12-000000.ts
+  Declared Duration: 7.99s
+  Actual Duration: 7.991544s
+  Difference: 0.00154399999999999s
+  File Size: 2530.5 KB
+  Status: [OK]
+
+Segment #33: 2025-12-15_10-33-35-000000.ts
+  Declared Duration: 9.74s
+  Actual Duration: 9.739289s
+  Difference: -0.000711000000000794s
+  File Size: 2600.1 KB
+  Status: [OK]
+
+Segment #34: 2025-12-15_10-33-42-000000.ts
+  Declared Duration: 8.05s
+  Actual Duration: 8.053811s
+  Difference: 0.0038109999999989s
+  File Size: 2617.9 KB
+  Status: [OK]
+
+Segment #35: 2025-12-15_10-33-50-000000.ts
+  Declared Duration: 8.01s
+  Actual Duration: 8.009967s
+  Difference: -3.30000000001718E-05s
+  File Size: 2590.7 KB
+  Status: [OK]
+
+Segment #36: 2025-12-15_10-33-58-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.000333s
+  Difference: 0.000332999999999473s
+  File Size: 2660.5 KB
+  Status: [OK]
+
+Segment #37: 2025-12-15_10-34-21-000000.ts
+  Declared Duration: 9.61s
+  Actual Duration: 9.611789s
+  Difference: 0.00178900000000048s
+  File Size: 2679.6 KB
+  Status: [OK]
+
+Segment #38: 2025-12-15_10-34-28-000000.ts
+  Declared Duration: 7.97s
+  Actual Duration: 7.973367s
+  Difference: 0.0033669999999999s
+  File Size: 2578.9 KB
+  Status: [OK]
+
+Segment #39: 2025-12-15_10-34-36-000000.ts
+  Declared Duration: 8.14s
+  Actual Duration: 8.137544s
+  Difference: -0.00245600000000046s
+  File Size: 2553.8 KB
+  Status: [OK]
+
+Segment #40: 2025-12-15_10-34-44-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.907067s
+  Difference: -0.00293300000000052s
+  File Size: 2609.2 KB
+  Status: [OK]
+
+Segment #41: 2025-12-15_10-35-07-000000.ts
+  Declared Duration: 9.66s
+  Actual Duration: 9.658033s
+  Difference: -0.0019670000000005s
+  File Size: 2175.6 KB
+  Status: [OK]
+
+Segment #42: 2025-12-15_10-35-14-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.907611s
+  Difference: -0.00238899999999997s
+  File Size: 1395.1 KB
+  Status: [OK]
+
+Segment #43: 2025-12-15_10-35-22-000000.ts
+  Declared Duration: 8.07s
+  Actual Duration: 8.073300s
+  Difference: 0.00329999999999941s
+  File Size: 1506 KB
+  Status: [OK]
+
+Segment #44: 2025-12-15_10-35-30-000000.ts
+  Declared Duration: 7.85s
+  Actual Duration: 7.847067s
+  Difference: -0.00293299999999963s
+  File Size: 2615.1 KB
+  Status: [OK]
+
+Segment #45: 2025-12-15_10-35-53-000000.ts
+  Declared Duration: 9.92s
+  Actual Duration: 9.916644s
+  Difference: -0.00335600000000014s
+  File Size: 2112.1 KB
+  Status: [OK]
+
+Segment #46: 2025-12-15_10-36-00-000000.ts
+  Declared Duration: 7.92s
+  Actual Duration: 7.918456s
+  Difference: -0.00154399999999999s
+  File Size: 2362.1 KB
+  Status: [OK]
+
+Segment #47: 2025-12-15_10-36-08-000000.ts
+  Declared Duration: 8.01s
+  Actual Duration: 8.005367s
+  Difference: -0.00463300000000011s
+  File Size: 2709.8 KB
+  Status: [OK]
+
+Segment #48: 2025-12-15_10-36-16-000000.ts
+  Declared Duration: 8.03s
+  Actual Duration: 8.033622s
+  Difference: 0.00362200000000001s
+  File Size: 2582.1 KB
+  Status: [OK]
+
+Segment #49: 2025-12-15_10-36-39-000000.ts
+  Declared Duration: 9.67s
+  Actual Duration: 9.669144s
+  Difference: -0.000856000000000634s
+  File Size: 2297.5 KB
+  Status: [OK]
+
+Segment #50: 2025-12-15_10-36-46-000000.ts
+  Declared Duration: 8.04s
+  Actual Duration: 8.039544s
+  Difference: -0.00045599999999979s
+  File Size: 2667.1 KB
+  Status: [OK]
+
+Segment #51: 2025-12-15_10-36-54-000000.ts
+  Declared Duration: 10.14s
+  Actual Duration: 10.138412s
+  Difference: -0.00158799999999992s
+  File Size: 2637.1 KB
+  Status: [OK]
+
+Segment #52: 2025-12-15_10-37-04-000000.ts
+  Declared Duration: 5.86s
+  Actual Duration: 5.864322s
+  Difference: 0.00432199999999927s
+  File Size: 1684.7 KB
+  Status: [OK]
+
+Segment #53: 2025-12-15_10-37-25-000000.ts
+  Declared Duration: 9.75s
+  Actual Duration: 9.753800s
+  Difference: 0.00380000000000003s
+  File Size: 2607.4 KB
+  Status: [OK]
+
+Segment #54: 2025-12-15_10-37-32-000000.ts
+  Declared Duration: 7.96s
+  Actual Duration: 7.959044s
+  Difference: -0.000956000000000401s
+  File Size: 2354 KB
+  Status: [OK]
+
+Segment #55: 2025-12-15_10-37-40-000000.ts
+  Declared Duration: 8.06s
+  Actual Duration: 8.059545s
+  Difference: -0.000455000000000538s
+  File Size: 2465.5 KB
+  Status: [OK]
+
+Segment #56: 2025-12-15_10-37-48-000000.ts
+  Declared Duration: 8.07s
+  Actual Duration: 8.069367s
+  Difference: -0.00063300000000055s
+  File Size: 2556.7 KB
+  Status: [OK]
+
+Segment #57: 2025-12-15_10-38-27-000000.ts
+  Declared Duration: 9.69s
+  Actual Duration: 9.689845s
+  Difference: -0.000154999999999461s
+  File Size: 2186.4 KB
+  Status: [OK]
+
+Segment #58: 2025-12-15_10-38-34-000000.ts
+  Declared Duration: 8.01s
+  Actual Duration: 8.014911s
+  Difference: 0.00491099999999989s
+  File Size: 2060.7 KB
+  Status: [OK]
+
+Segment #59: 2025-12-15_10-38-42-000000.ts
+  Declared Duration: 7.98s
+  Actual Duration: 7.979344s
+  Difference: -0.000656000000000212s
+  File Size: 2631.4 KB
+  Status: [OK]
+
+Segment #60: 2025-12-15_10-38-50-000000.ts
+  Declared Duration: 10.05s
+  Actual Duration: 10.047633s
+  Difference: -0.00236700000000134s
+  File Size: 3155.6 KB
+  Status: [OK]
+
+Segment #61: 2025-12-15_10-39-13-000000.ts
+  Declared Duration: 9.7s
+  Actual Duration: 9.699655s
+  Difference: -0.000344999999999374s
+  File Size: 2567.7 KB
+  Status: [OK]
+
+Segment #62: 2025-12-15_10-39-20-000000.ts
+  Declared Duration: 8.04s
+  Actual Duration: 8.035078s
+  Difference: -0.00492199999999876s
+  File Size: 2596 KB
+  Status: [OK]
+
+Segment #63: 2025-12-15_10-39-28-000000.ts
+  Declared Duration: 8.08s
+  Actual Duration: 8.079367s
+  Difference: -0.00063300000000055s
+  File Size: 2532.9 KB
+  Status: [OK]
+
+Segment #64: 2025-12-15_10-39-36-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.911522s
+  Difference: 0.00152199999999958s
+  File Size: 2724.9 KB
+  Status: [OK]
+
+Segment #65: 2025-12-15_10-39-59-000000.ts
+  Declared Duration: 9.76s
+  Actual Duration: 9.756311s
+  Difference: -0.00368899999999961s
+  File Size: 2160 KB
+  Status: [OK]
+
+Segment #66: 2025-12-15_10-40-06-000000.ts
+  Declared Duration: 7.93s
+  Actual Duration: 7.928922s
+  Difference: -0.00107799999999969s
+  File Size: 2397.9 KB
+  Status: [OK]
+
+Segment #67: 2025-12-15_10-40-14-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.004167s
+  Difference: 0.0041670000000007s
+  File Size: 2602.3 KB
+  Status: [OK]
+
+Segment #68: 2025-12-15_10-40-22-000000.ts
+  Declared Duration: 8.06s
+  Actual Duration: 8.060144s
+  Difference: 0.000143999999998812s
+  File Size: 2611.3 KB
+  Status: [OK]
+
+Segment #69: 2025-12-15_10-40-43-000000.ts
+  Declared Duration: 9.73s
+  Actual Duration: 9.729223s
+  Difference: -0.000777000000001138s
+  File Size: 2505.5 KB
+  Status: [OK]
+
+Segment #70: 2025-12-15_10-40-50-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.905244s
+  Difference: -0.00475600000000043s
+  File Size: 2702.3 KB
+  Status: [OK]
+
+Segment #71: 2025-12-15_10-40-58-000000.ts
+  Declared Duration: 7.97s
+  Actual Duration: 7.970367s
+  Difference: 0.000367000000000672s
+  File Size: 2576.2 KB
+  Status: [OK]
+
+Segment #72: 2025-12-15_10-41-06-000000.ts
+  Declared Duration: 7.97s
+  Actual Duration: 7.973322s
+  Difference: 0.00332199999999983s
+  File Size: 2589.2 KB
+  Status: [OK]
+
+Segment #73: 2025-12-15_10-41-29-000000.ts
+  Declared Duration: 9.3s
+  Actual Duration: 9.304634s
+  Difference: 0.00463399999999936s
+  File Size: 2464.4 KB
+  Status: [OK]
+
+Segment #74: 2025-12-15_10-41-36-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.002300s
+  Difference: 0.00229999999999997s
+  File Size: 2521.3 KB
+  Status: [OK]
+
+Segment #75: 2025-12-15_10-41-44-000000.ts
+  Declared Duration: 7.97s
+  Actual Duration: 7.965189s
+  Difference: -0.00481100000000012s
+  File Size: 2291.2 KB
+  Status: [OK]
+
+Segment #76: 2025-12-15_10-41-52-000000.ts
+  Declared Duration: 8.02s
+  Actual Duration: 8.021822s
+  Difference: 0.00182200000000066s
+  File Size: 2354.4 KB
+  Status: [OK]
+
+Segment #77: 2025-12-15_10-42-15-000000.ts
+  Declared Duration: 9.76s
+  Actual Duration: 9.758889s
+  Difference: -0.00111099999999986s
+  File Size: 1996 KB
+  Status: [OK]
+
+Segment #78: 2025-12-15_10-42-22-000000.ts
+  Declared Duration: 8.04s
+  Actual Duration: 8.039600s
+  Difference: -0.000399999999999068s
+  File Size: 2549.9 KB
+  Status: [OK]
+
+Segment #79: 2025-12-15_10-42-30-000000.ts
+  Declared Duration: 7.92s
+  Actual Duration: 7.924656s
+  Difference: 0.00465599999999977s
+  File Size: 2637.5 KB
+  Status: [OK]
+
+Segment #80: 2025-12-15_10-42-38-000000.ts
+  Declared Duration: 8.04s
+  Actual Duration: 8.037333s
+  Difference: -0.00266699999999886s
+  File Size: 2649.1 KB
+  Status: [OK]
+
+Segment #81: 2025-12-15_10-43-01-000000.ts
+  Declared Duration: 9.78s
+  Actual Duration: 9.779434s
+  Difference: -0.000565999999999178s
+  File Size: 2249.8 KB
+  Status: [OK]
+
+Segment #82: 2025-12-15_10-43-08-000000.ts
+  Declared Duration: 7.98s
+  Actual Duration: 7.975333s
+  Difference: -0.00466700000000042s
+  File Size: 2419.6 KB
+  Status: [OK]
+
+Segment #83: 2025-12-15_10-43-16-000000.ts
+  Declared Duration: 7.93s
+  Actual Duration: 7.931867s
+  Difference: 0.00186700000000073s
+  File Size: 2623.9 KB
+  Status: [OK]
+
+Segment #84: 2025-12-15_10-43-24-000000.ts
+  Declared Duration: 8.05s
+  Actual Duration: 8.045678s
+  Difference: -0.00432200000000016s
+  File Size: 2417.6 KB
+  Status: [OK]
+
+Segment #85: 2025-12-15_10-43-47-000000.ts
+  Declared Duration: 9.79s
+  Actual Duration: 9.787689s
+  Difference: -0.00231099999999884s
+  File Size: 2692.2 KB
+  Status: [OK]
+
+Segment #86: 2025-12-15_10-43-54-000000.ts
+  Declared Duration: 7.81s
+  Actual Duration: 7.812644s
+  Difference: 0.00264400000000009s
+  File Size: 2578.2 KB
+  Status: [OK]
+
+Segment #87: 2025-12-15_10-44-02-000000.ts
+  Declared Duration: 8.13s
+  Actual Duration: 8.125422s
+  Difference: -0.00457800000000042s
+  File Size: 2663.2 KB
+  Status: [OK]
+
+Segment #88: 2025-12-15_10-44-10-000000.ts
+  Declared Duration: 8.01s
+  Actual Duration: 8.012756s
+  Difference: 0.00275599999999976s
+  File Size: 2531.8 KB
+  Status: [OK]
+
+Segment #89: 2025-12-15_10-44-33-000000.ts
+  Declared Duration: 9.56s
+  Actual Duration: 9.556622s
+  Difference: -0.00337799999999966s
+  File Size: 1535.8 KB
+  Status: [OK]
+
+Segment #90: 2025-12-15_10-44-40-000000.ts
+  Declared Duration: 8.06s
+  Actual Duration: 8.057689s
+  Difference: -0.00231100000000062s
+  File Size: 1973.6 KB
+  Status: [OK]
+
+Segment #91: 2025-12-15_10-44-48-000000.ts
+  Declared Duration: 8.01s
+  Actual Duration: 8.008333s
+  Difference: -0.00166699999999942s
+  File Size: 2648.7 KB
+  Status: [OK]
+
+Segment #92: 2025-12-15_10-44-56-000000.ts
+  Declared Duration: 7.94s
+  Actual Duration: 7.939711s
+  Difference: -0.000289000000000428s
+  File Size: 2272.3 KB
+  Status: [OK]
+
+Segment #93: 2025-12-15_10-45-19-000000.ts
+  Declared Duration: 9.44s
+  Actual Duration: 9.439077s
+  Difference: -0.000923000000000229s
+  File Size: 2708.9 KB
+  Status: [OK]
+
+Segment #94: 2025-12-15_10-45-26-000000.ts
+  Declared Duration: 8.15s
+  Actual Duration: 8.147900s
+  Difference: -0.00210000000000043s
+  File Size: 2296.2 KB
+  Status: [OK]
+
+Segment #95: 2025-12-15_10-45-34-000000.ts
+  Declared Duration: 7.93s
+  Actual Duration: 7.929389s
+  Difference: -0.000611000000000139s
+  File Size: 2540.6 KB
+  Status: [OK]
+
+Segment #96: 2025-12-15_10-45-42-000000.ts
+  Declared Duration: 7.91s
+  Actual Duration: 7.914956s
+  Difference: 0.00495599999999996s
+  File Size: 2473 KB
+  Status: [OK]
+
+Segment #97: 2025-12-15_10-46-03-000000.ts
+  Declared Duration: 9.57s
+  Actual Duration: 9.566033s
+  Difference: -0.00396700000000116s
+  File Size: 2643.9 KB
+  Status: [OK]
+
+Segment #98: 2025-12-15_10-46-10-000000.ts
+  Declared Duration: 7.97s
+  Actual Duration: 7.973333s
+  Difference: 0.00333300000000047s
+  File Size: 2601 KB
+  Status: [OK]
+
+Segment #99: 2025-12-15_10-46-18-000000.ts
+  Declared Duration: 8s
+  Actual Duration: 8.002367s
+  Difference: 0.00236699999999956s
+  File Size: 2636.4 KB
+  Status: [OK]
+
+Segment #100: 2025-12-15_10-46-26-000000.ts
+  Declared Duration: 7.88s
+  Actual Duration: 7.881444s
+  Difference: 0.00144400000000022s
+  File Size: 2572.9 KB
+  Status: [OK]
+
+Segment #101: 2025-12-15_10-46-49-000000.ts
+  Declared Duration: 9.64s
+  Actual Duration: 9.635689s
+  Difference: -0.00431100000000129s
+  File Size: 1951.2 KB
+  Status: [OK]
+
+Segment #102: 2025-12-15_10-46-56-000000.ts
+  Declared Duration: 8.06s
+  Actual Duration: 8.057210s
+  Difference: -0.00279000000000096s
+  File Size: 2158.9 KB
+  Status: [OK]
+
+Segment #103: 2025-12-15_10-47-04-000000.ts
+  Declared Duration: 7.89s
+  Actual Duration: 7.892567s
+  Difference: 0.00256699999999999s
+  File Size: 2279.5 KB
+  Status: [OK]
+
+Segment #104: 2025-12-15_10-47-12-000000.ts
+  Declared Duration: 8.09s
+  Actual Duration: 8.087644s
+  Difference: -0.00235600000000069s
+  File Size: 1780.7 KB
+  Status: [OK]
+
+================================================================================
+Summary
+================================================================================
+Total segments analyzed: 104
+Successfully analyzed: 104
+Failed: 0
+
+Total declared duration: 879.38s (14.7 minutes)
+Total actual duration: 879.387699s (14.7 minutes)
+Total difference: 0.0076990000003434s (0 minutes)
+
+CSV file: m3u8_durations_analysis_20251215_155701.csv
+================================================================================
